@@ -1,6 +1,6 @@
 add_library(CustomOptPass MODULE
     # List your source files here.
-    StrengthReductionFolding.cpp
+    StrengthReductionConstFolding.cpp
     CommonSubexpressionElim.cpp
     DeadCodeElimination.cpp
 )

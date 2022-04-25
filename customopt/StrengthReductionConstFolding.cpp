@@ -12,9 +12,9 @@
 using namespace llvm;
 
 namespace {
-    struct StrengthReductionFoldingPass : public FunctionPass {
+    struct SRCFPass : public FunctionPass {
         static char ID;
-        StrengthReductionFoldingPass() : FunctionPass(ID) {}
+        SRCFPass() : FunctionPass(ID) {}
 
         virtual bool runOnFunction(Function& function) {
 
@@ -400,6 +400,6 @@ namespace {
     };
 }
 
-char StrengthReductionFoldingPass::ID = 0;
+char SRCFPass::ID = 0;
 
-static RegisterPass<StrengthReductionFoldingPass> X("strfold", "Strength Reduction & Constant Folding", false, true);
+static RegisterPass<SRCFPass> X("srcf", "Strength Reduction & Constant Folding", false, true);
